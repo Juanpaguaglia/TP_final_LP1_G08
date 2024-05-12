@@ -18,24 +18,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TPfinalLP1\cVikingo.cpp">
+    <ClCompile Include="cJinete.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\TPfinalLP1\cDragon.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\TPfinalLP1\cJinete.cpp">
+    <ClCompile Include="cDragon.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\TPfinalLP1\cDragon.h">
+    <ClInclude Include="cJinete.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\TPfinalLP1\cJinete.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\TPfinalLP1\cVikingo.h">
+    <ClInclude Include="cDragon.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
