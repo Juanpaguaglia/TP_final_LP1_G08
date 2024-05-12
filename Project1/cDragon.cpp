@@ -26,13 +26,13 @@ void cDragon::Entrenar()
 
 void cDragon::Baja()
 {
-	~cDragon(); //Ver si esta bien
+	//se debe eliminar el objeto de dragon pero noc como
 }
 
-void cDragon::set_forma_de_ataque(enum Forma_de_Ataque)
-{
-	forma_de_ataque = Forma_de_Ataque;
-}
+//void cDragon::set_forma_de_ataque(enum Forma_de_Ataque)
+//{
+//	forma_de_ataque = Forma_de_Ataque;
+//}
 
 string cDragon::get_nombre()
 {
@@ -68,7 +68,7 @@ cDragon::cDragon()
 {
 	nombre = "";
 	caracteristica = "";
-	tamanio = "";
+	tamanio = 0.0;
 	color = "";
 	estado = false;
 	entrenando = false;
@@ -83,14 +83,14 @@ cDragon::cDragon(string Nombre, string Caracteristica, float Tamanio, string Col
 	color = Color;
 	entrenando = Entrenando;
 	estado = Estado;
-	forma_de_ataque = Forma_de_Ataque;
+	//forma_de_ataque = Forma_de_ataque ; (problema al inicializar unenum)
 }
 
 cDragon::~cDragon()
 {
 }
 
-enum cDragon::get_forma_de_ataque()
-{
-	return forma_de_ataque;
-}
+//enum cDragon::get_forma_de_ataque()
+//{
+//	return forma_de_ataque;
+//}

@@ -1,61 +1,52 @@
 #include "cJinete.h"
 using namespace std;
 
-void Incorporar_Dragon(cDragon* dragon_n)
+
+void cJinete::Incorporar_Dragon(cDragon* dragon_n)
 {
 	this->dragones.push_back(dragon_n);
 }
 
-//;
-
-string get_nombre()
+string cJinete::get_nombre()
 {
 	return nombre;
 }
 
-string get_apellido()
+string cJinete::get_apellido()
 {
 	return apellido;
 }
 
-string get_apodo()
+string cJinete::get_apodo()
 {
 	return apodo;
 }
 
-int get_fecha_nacimiento() const
+int cJinete::get_fecha_nacimiento() 
 {
 	return fecha_nacimiento;
 }
 
-enum get_resultado()
-{
-	return resultado;
-}
-
-cjinete()
+cJinete::cJinete()
 {
 	nombre = "";
 	apellido = "";
-	apodo = "";
-	//const int fecha_naciemiento
+	fecha_nacimiento = 0;
 	caracteristicas_fisicas = "";
-	//inicializar en el enum resultado
-	this->dragones = NULL;
+	//como inicializo un enum
+	// this->dragones = NULL;  (tira un error con el igual)
 }
 
-cJinete(string Nombre, string Apellido, string Apodo, const int Fecha_Nacimiento, string Caracteristicas_Fisicas, enum Resultado)
-string nombre = Nombre;
-string apellido = Apellido;
-string apodo = Apodo;
-//const int fecha_naciemiento como hacer en constructor
-string caracteristicas_fisicas = Caracteristicas_fisicas;
-enum resultado = Resultado;
-this->dragones = NULL;
+cJinete::cJinete(string Nombre, string Apellido, string Apodo, int Fecha_Nacimiento, string Caracteristicas_Fisicas, enum Resultado)
+{
+	nombre = Nombre;
+	apellido = Apellido;
+	fecha_nacimiento = Fecha_Nacimiento;
+	caracteristicas_fisicas = Caracteristicas_Fisicas;
+	//como inicializo un enum
+	// this->dragones = NULL;  (tira un error con el igual)
 }
 
-~cJinete()
+cJinete::~cJinete()
 {
 }
-
-

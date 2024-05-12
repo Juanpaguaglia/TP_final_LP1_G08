@@ -15,7 +15,7 @@ private:
 	bool estado; //True si esta domado; False si no lo esta
 	enum forma_de_ataque
 	{
-		ataque_1, ataque_2, ataque_3;
+		ataque_1, ataque_2, ataque_3
 	};
 
 public:
