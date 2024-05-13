@@ -1,7 +1,4 @@
-#pragma once
-#include <fstream>
-#include <string>
-
+#include"Headers.h"
 
 class cDragon
 {
@@ -23,7 +20,7 @@ public:
 	void Alta_nombre(string Nombre); //set nombre
 	bool Domado(); //get estado
 	void Entrenar();
-	void Baja(); //llama al destructor
+	void Baja(); //llama al destructor¿¿¿
 	void set_forma_de_ataque(enum Forma_de_Ataque);
 	string get_nombre();
 	string get_caracteristica();

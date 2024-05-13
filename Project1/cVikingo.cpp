@@ -1,7 +1,6 @@
-#include "cVikingo.h"
-#include <iostream>
+#include"Headers.h"
 
-std::string cVikingo::Trabajar()
+string cVikingo::Trabajar()
 {
 	return posicion;
 }
@@ -16,12 +15,12 @@ void cVikingo::Atacardragones()
 	std::cout << "Preparense para una incursión en el territorio de los dragones";
 }
 
-std::string cVikingo::get_nombre()
+string cVikingo::get_nombre()
 {
 	return nombre;
 }
 
-std::string cVikingo::get_apellido()
+string cVikingo::get_apellido()
 {
 	return apellido;
 }
@@ -44,7 +43,7 @@ cVikingo::cVikingo()
 	dragones_matados = 0;
 }
 
-cVikingo::cVikingo(std::string Nombre, std::string Apellido, std::string Posicion)
+cVikingo::cVikingo(string Nombre, string Apellido, string Posicion)
 {
 	nombre = Nombre;
 	apellido = Apellido;

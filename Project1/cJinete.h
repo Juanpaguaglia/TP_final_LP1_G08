@@ -1,9 +1,4 @@
-#pragma once
-#include <list> 
-#include "cDragon.h"
-#include <fstream>
-#include <string>
-
+#include"Headers.h"
 
 class cJinete
 {

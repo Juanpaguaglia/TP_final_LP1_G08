@@ -1,6 +1,4 @@
-#include "cJinete.h"
-using namespace std;
-
+#include"Headers.h"
 
 void cJinete::Incorporar_Dragon(cDragon* dragon_n)
 {

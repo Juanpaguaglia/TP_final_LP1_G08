@@ -1,6 +1,4 @@
-#include "cDragon.h"
-#include <fstream>
-using namespace std;
+#include"Headers.h"
 
 void cDragon::Alta_nombre(string Nombre)
 {
