@@ -7,7 +7,8 @@ string cVikingo::Trabajar()
 
 bool cVikingo::Dragones_terminados(cDragon* dragon_m)
 {
-	return false;
+	//return false; Ver que hace esta funcion
+	//dragones_matados++;
 }
 
 void cVikingo::Atacardragones()

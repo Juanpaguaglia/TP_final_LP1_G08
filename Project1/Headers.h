@@ -7,4 +7,5 @@
 #include"cJinete.h"
 #include"cDragon.h"
 #include"cVikingo.h"
+#include"cAtaque.h"
 using namespace std;

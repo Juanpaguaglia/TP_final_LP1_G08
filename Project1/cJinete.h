@@ -11,7 +11,7 @@ private:
 	string caracteristicas_fisicas;
 	enum resultado
 	{
-		No_asistio, Aprobado, Desaprobado, Primero, Ultimo //como inicializo esto
+		No_asistio, Aprobado, Desaprobado, Primero, Ultimo 
 	};
 	list <cDragon*> dragones;
 
