@@ -5,15 +5,24 @@ string cVikingo::Trabajar()
 	return posicion;
 }
 
-bool cVikingo::Dragones_terminados(cDragon* dragon_m)
+bool cVikingo::Dragones_terminados()
 {
-	//return false; Ver que hace esta funcion
-	//dragones_matados++;
+	if (dragones_matados > 1) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
-void cVikingo::Atacardragones()
+void cVikingo::Atacar_dragones()
 {
 	std::cout << "Preparense para una incursión en el territorio de los dragones";
+}
+
+void cVikingo::Matar_dragon()
+{
+	dragones_matados++;
 }
 
 string cVikingo::get_nombre()

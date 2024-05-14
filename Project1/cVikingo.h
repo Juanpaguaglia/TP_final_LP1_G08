@@ -12,8 +12,9 @@ private:
 public:
 
 	string Trabajar(); //Funciona como un get posicion
-	bool Dragones_terminados(cDragon* dragon_m); //siendo dragon_m el dragon asesinado
-	void Atacardragones();
+	bool Dragones_terminados();
+	void Atacar_dragones();
+	void Matar_dragon();
 	string get_nombre();
 	string get_apellido();
 	int get_dragones_matados();
