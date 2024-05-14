@@ -23,6 +23,7 @@ public:
 	string get_apellido();
 	string get_apodo();
 	int get_fecha_nacimiento();
+	string get_caracteristicas_fisicas();
 	enum get_resultado();
 	cJinete();
 	cJinete(string Nombre, string Apellido, string Apodo, const int Fecha_Nacimiento, string Caracteristicas_Fisicas, enum Resultado);

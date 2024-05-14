@@ -27,6 +27,11 @@ int cJinete::get_fecha_nacimiento()
 	return fecha_nacimiento;
 }
 
+string cJinete::get_caracteristicas_fisicas()
+{
+	return caracteristicas_fisicas;
+}
+
 enum cJinete::get_resultado() 
 {
 	return resultado;
