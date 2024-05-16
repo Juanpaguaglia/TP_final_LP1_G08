@@ -1,5 +1,10 @@
 #include"Headers.h"
 
+enum eresultado
+{
+	No_asistio, Aprobado, Desaprobado, Primero, Ultimo
+};
+
 class cJinete
 {
 private:
@@ -9,10 +14,7 @@ private:
 	string apodo;
 	int fecha_nacimiento;
 	string caracteristicas_fisicas;
-	enum resultado
-	{
-		No_asistio, Aprobado, Desaprobado, Primero, Ultimo 
-	};
+	eresultado resultado;
 	list <cDragon*> dragones;
 
 public:
@@ -24,9 +26,9 @@ public:
 	string get_apodo();
 	int get_fecha_nacimiento();
 	string get_caracteristicas_fisicas();
-	enum get_resultado();
+	eresultado get_resultado() const;
 	cJinete();
-	cJinete(string Nombre, string Apellido, string Apodo, const int Fecha_Nacimiento, string Caracteristicas_Fisicas, enum Resultado);
+	cJinete(string Nombre, string Apellido, string Apodo, const int Fecha_Nacimiento, string Caracteristicas_Fisicas, eresultado resultado, list <cDragon*> dragones);
 	~cJinete();
 
 };
