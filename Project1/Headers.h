@@ -8,4 +8,5 @@
 #include"cDragon.h"
 #include"cVikingo.h"
 #include"cAtaque.h"
+#include"cEstoico.h"
 using namespace std;

@@ -24,7 +24,7 @@ void cDragon::Entrenar()
 
 void cDragon::Baja()
 {
-	//se debe eliminar el objeto de dragon pero noc como
+	vivo = false;
 }
 
 string cDragon::get_nombre()
@@ -57,6 +57,11 @@ bool cDragon::get_entrenando()
 	return entrenando;
 }
 
+bool cDragon::get_vivo()
+{
+	return true;
+}
+
 cDragon::cDragon()
 {
 	nombre = "";
@@ -65,11 +70,12 @@ cDragon::cDragon()
 	color = "";
 	estado = false;
 	entrenando = false;
+	vivo = true;
 	this->ataque = NULL;
 
 }
 
-cDragon::cDragon(string Nombre, string Caracteristica, float Tamanio, string Color, bool Entrenando, bool Estado)
+cDragon::cDragon(string Nombre, string Caracteristica, float Tamanio, string Color, bool Entrenando, bool Estado, bool Vivo)
 {
 	nombre = Nombre;
 	caracteristica = Caracteristica;
@@ -77,6 +83,7 @@ cDragon::cDragon(string Nombre, string Caracteristica, float Tamanio, string Col
 	color = Color;
 	entrenando = Entrenando;
 	estado = Estado;
+	vivo = Vivo;
 	this->ataque = NULL;
 }
 

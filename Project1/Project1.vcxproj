@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="cAtaque.cpp" />
     <ClCompile Include="cDragon.cpp" />
+    <ClCompile Include="cEstoico.cpp" />
     <ClCompile Include="cJinete.cpp" />
     <ClCompile Include="cVikingo.cpp" />
     <ClCompile Include="main.cpp" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="cAtaque.h" />
     <ClInclude Include="cDragon.h" />
+    <ClInclude Include="cEstoico.h" />
     <ClInclude Include="cJinete.h" />
     <ClInclude Include="cVikingo.h" />
     <ClInclude Include="Headers.h" />

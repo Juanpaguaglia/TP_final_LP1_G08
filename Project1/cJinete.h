@@ -20,7 +20,7 @@ private:
 public:
 
 	void Incorporar_Dragon(cDragon* dragon_n); //es un set al final de la lista de dragones
-	//falta un get de la lista de dragones
+	list <cDragon*> getDragones();//get de la lista de dragones
 	string get_nombre();
 	string get_apellido();
 	string get_apodo();

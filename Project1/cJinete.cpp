@@ -5,7 +5,10 @@ void cJinete::Incorporar_Dragon(cDragon* dragon_n)
 	this->dragones.push_back(dragon_n);
 }
 
-//get de la lista de dragones
+list<cDragon*> cJinete::getDragones()
+{
+	return dragones;
+}
 
 string cJinete::get_nombre()
 {
