@@ -1,34 +1,32 @@
 #include"Headers.h"
 
-enum eresultado
+enum eResultado
 {
 	No_asistio, Aprobado, Desaprobado, Primero, Ultimo
 };
 
-class cJinete
+class cJinete:public cVikingo
 {
-private:
+protected:
 
-	string nombre;
-	string apellido;
 	string apodo;
 	string fecha_nacimiento;
-	string caracteristicas_fisicas;
-	eresultado resultado;
-	list <cDragon*> dragones;
+	eResultado resultado;
+	list <cDragon*> dragones_montados;
 
 public:
 
 	void Incorporar_Dragon(cDragon* dragon_n); //es un set al final de la lista de dragones
+	void EliminarDragon(cDragon* dragon_e); //hacer try catch exception
+	void Interaccion(cDragon* dragon); //En este caso va a ser entrenarlo y en el guerrero matarlo
+
 	list <cDragon*> getDragones();//get de la lista de dragones
-	string get_nombre();
-	string get_apellido();
 	string get_apodo();
 	string get_fecha_nacimiento();
-	string get_caracteristicas_fisicas();
-	eresultado get_resultado() const;
-	cJinete();
-	cJinete(string Nombre, string Apellido, string Apodo, string Fecha_Nacimiento, string Caracteristicas_Fisicas, eresultado resultado, list <cDragon*> dragones);
+	eResultado get_resultado();
+	void set_resultado(eResultado resultado);
+
+	cJinete(string Apodo, string Fecha_Nacimiento, eResultado resultado);
 	~cJinete();
 
 };

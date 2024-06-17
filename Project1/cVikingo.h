@@ -12,7 +12,7 @@ enum ePosicion
 
 class cVikingo //clase base de jinete y guerrero
 {
-private:
+protected:
 
 	string nombre;
 	string apellido;
@@ -24,9 +24,8 @@ public:
 
 	void Trabajar(); //Dependiendo como es el vikingo le asigna una posicion
 	bool Dragones_terminados(); //devuelve true si el vikingo mato mas de 1 dragon
-	void Atacar_dragones(); //Avisa que van a ir a atacar
 	void Matar_dragon(); //incrementa en 1 los ragones eliminados
-	virtual bool Interaccion(cDragon* dragon)const = 0;
+	virtual void Interaccion(cDragon* dragon)const = 0;
 	
 	ePosicion get_posicion();
 	void set_posicion(ePosicion pos);

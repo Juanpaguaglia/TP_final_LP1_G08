@@ -22,11 +22,6 @@ bool cVikingo::Dragones_terminados()
 	}
 }
 
-void cVikingo::Atacar_dragones()
-{
-	std::cout << "Preparense para una incursión en el territorio de los dragones";
-}
-
 void cVikingo::Matar_dragon()
 {
 	dragones_matados++;

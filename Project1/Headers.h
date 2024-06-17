@@ -9,4 +9,5 @@
 #include"cVikingo.h"
 #include"cAtaque.h"
 #include"cEstoico.h"
+#include <cstdlib>
 using namespace std;
