@@ -25,7 +25,7 @@ string cJinete::get_apodo()
 	return apodo;
 }
 
-int cJinete::get_fecha_nacimiento() 
+string cJinete::get_fecha_nacimiento() 
 {
 	return fecha_nacimiento;
 }
@@ -40,8 +40,18 @@ eresultado cJinete::get_resultado()const
 	return resultado;
 }
 
+cJinete::cJinete()
+{
+	this->nombre = "Ragnar";
+	this->apellido = "Lodbrok";
+	this->apodo = "Titan";
+	this->fecha_nacimiento = "11-10-995";
+	this->caracteristicas_fisicas = "Caracteristicas_Fisicas"; //cambiar a enum
+	this->resultado = No_asistio;
+}
+
 //Creo que está bien pero a revisar --> Lista de inicializacion para la "list dragones" ¿se hace asi el constructor en este caso?
-cJinete::cJinete(string Nombre, string Apellido, string Apodo, int Fecha_Nacimiento, string Caracteristicas_Fisicas, eresultado Resultado, list <cDragon*> dragones):dragones(dragones)
+cJinete::cJinete(string Nombre, string Apellido, string Apodo, string Fecha_Nacimiento, string Caracteristicas_Fisicas, eresultado Resultado, list <cDragon*> dragones):dragones(dragones)
 {
 	this->nombre = Nombre;
 	this->apellido = Apellido;

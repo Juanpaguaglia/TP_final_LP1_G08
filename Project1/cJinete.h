@@ -12,7 +12,7 @@ private:
 	string nombre;
 	string apellido;
 	string apodo;
-	int fecha_nacimiento;
+	string fecha_nacimiento;
 	string caracteristicas_fisicas;
 	eresultado resultado;
 	list <cDragon*> dragones;
@@ -24,11 +24,11 @@ public:
 	string get_nombre();
 	string get_apellido();
 	string get_apodo();
-	int get_fecha_nacimiento();
+	string get_fecha_nacimiento();
 	string get_caracteristicas_fisicas();
 	eresultado get_resultado() const;
 	cJinete();
-	cJinete(string Nombre, string Apellido, string Apodo, const int Fecha_Nacimiento, string Caracteristicas_Fisicas, eresultado resultado, list <cDragon*> dragones);
+	cJinete(string Nombre, string Apellido, string Apodo, string Fecha_Nacimiento, string Caracteristicas_Fisicas, eresultado resultado, list <cDragon*> dragones);
 	~cJinete();
 
 };
