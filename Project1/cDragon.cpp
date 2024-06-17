@@ -1,5 +1,7 @@
 #include"Headers.h"
 
+int cDragon::dragonesCreados = 0;
+
 void cDragon::Alta_nombre(string Nombre)
 {
 	nombre = Nombre;
@@ -10,21 +12,14 @@ bool cDragon::Domado()
 	return estado;
 }
 
-void cDragon::Entrenar()
-{
-	if (estado == true)
-	{
-		entrenando = true;
-	}
-	else
-	{
-		entrenando = false;
-	}
-}
-
 void cDragon::Baja()
 {
 	vivo = false;
+}
+
+list<cAtaque*> cDragon::get_Fataque()
+{
+	return Fataque;
 }
 
 string cDragon::get_nombre()
@@ -32,17 +27,12 @@ string cDragon::get_nombre()
 	return nombre;
 }
 
-string cDragon::get_caracteristica()
-{
-	return caracteristica;
-}
-
-float cDragon::get_tamanio()
+eTamanio cDragon::get_tamanio()
 {
 	return tamanio;
 }
 
-string cDragon::get_color()
+eColor cDragon::get_color()
 {
 	return color;
 }
@@ -52,11 +42,6 @@ void cDragon::set_estado(bool Estado)
 	estado = Estado;
 }
 
-bool cDragon::get_entrenando()
-{
-	return entrenando;
-}
-
 bool cDragon::get_vivo()
 {
 	return true;
@@ -64,27 +49,23 @@ bool cDragon::get_vivo()
 
 cDragon::cDragon()
 {
-	nombre = "";
-	caracteristica = "";
-	tamanio = 0.0;
-	color = "";
-	estado = false;
-	entrenando = false;
-	vivo = true;
-	this->ataque = NULL;
+	this->nombre = "Furia Nocturna";
+	this->tamanio = mediano;
+	this->color = negro;
+	this->estado = false;
+	this->vivo = true;
+	this->Fataque = NULL;
 
 }
 
-cDragon::cDragon(string Nombre, string Caracteristica, float Tamanio, string Color, bool Entrenando, bool Estado, bool Vivo)
+cDragon::cDragon(string Nombre, eTamanio Tamanio, eColor Color, bool Estado)
 {
-	nombre = Nombre;
-	caracteristica = Caracteristica;
-	tamanio = Tamanio;
-	color = Color;
-	entrenando = Entrenando;
-	estado = Estado;
-	vivo = Vivo;
-	this->ataque = NULL;
+	this->nombre = Nombre;
+	this->tamanio = Tamanio;
+	this->color = Color;
+	this->estado = Estado;
+	this->vivo = true;
+	this->Fataque = NULL;
 }
 
 cDragon::~cDragon()

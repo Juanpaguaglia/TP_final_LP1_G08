@@ -36,7 +36,7 @@ public:
 	void set_dragones_matados(int n);
 
 	cVikingo(string Nombre, string Apellido, ePosicion posicion, eCaracteristica caracteristica);
-	~cVikingo();
+	virtual ~cVikingo();
 
 };
 

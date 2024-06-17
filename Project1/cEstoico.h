@@ -6,11 +6,9 @@ private:
 	static int vikingosActivos;
 	static int dragonesActivos;
 	list <cDragon*> dragones;
-	list <cJinete*> jinetes; //Sacar cuando hagamos la herencia
 	list <cVikingo*> vikingos;
 public:
 	list <cDragon*> getDragones(); 
-	list <cJinete*> getJinetes(); //Sacara cuando hagamos herencia
 	list <cVikingo*> getVikingos(); 
 	void AgregarDragon(cDragon* dra_nue);
 	void AgregarVikingo(cVikingo* vik_nue);

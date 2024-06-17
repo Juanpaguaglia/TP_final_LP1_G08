@@ -18,14 +18,9 @@ void cJinete::EliminarDragon(cDragon* dragon_e)
 			throw exception("El elemento no esta en la lista");
 }
 
-bool cJinete::Interaccion(cDragon* dragon)
+void cJinete::Interaccion(cDragon* dragon)
 {
-	if (resultado != No_asistio && resultado != Desaprobado) {
-		Incorporar_Dragon(dragon); 
-		return true;
-	}
-	else
-		return false;
+	
 }
 
 list<cDragon*> cJinete::getDragones()

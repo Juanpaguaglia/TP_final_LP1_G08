@@ -1,23 +1,18 @@
 #include"Headers.h"
 
-eforma_de_ataque cAtaque::get_forma_de_ataque() const
+int cAtaque::get_danio()
 {
-	return forma_de_ataque;
-}
-
-void cAtaque::set_forma_de_ataque(eforma_de_ataque Forma_de_ataque)
-{
-	this->forma_de_ataque = Forma_de_ataque;
+	return danio;
 }
 
 cAtaque::cAtaque()
 {
-	forma_de_ataque = Ataque_1;
+	danio = rand() % 1000; //daño aleatorio entre 0 y 1000
 }
 
-cAtaque::cAtaque(eforma_de_ataque forma_de_ataque) 
+cAtaque::cAtaque(int danio_n) 
 {
-	this->forma_de_ataque = forma_de_ataque;
+	this->danio = danio_n;
 }
 
 cAtaque::~cAtaque()

@@ -1,22 +1,19 @@
 #include"Headers.h"
 
-
-enum eforma_de_ataque
+class cAtaque //clase base de ataqueCC y ataqueAD
 {
-	Ataque_1, Ataque_2, Ataque_3
-}; 
-
-class cAtaque
-{
-private:
-	eforma_de_ataque forma_de_ataque;
+protected:
+	int danio;
 
 public:
-	eforma_de_ataque get_forma_de_ataque() const;
-	void set_forma_de_ataque(eforma_de_ataque Forma_de_ataque);
+	int get_danio();
+	void set_danio(int danio_n);
+
 	cAtaque();
-	cAtaque (eforma_de_ataque forma_de_ataque);
-	~cAtaque();
+	cAtaque (int danio_n);
+	virtual ~cAtaque();
+
+	virtual void Adefinir()const=0;
 
 };
 
