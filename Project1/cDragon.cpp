@@ -1,8 +1,9 @@
 #include"Headers.h"
+#include "cDragon.h"
 
 int cDragon::dragonesCreados = 0;
 
-void cDragon::Alta_nombre(string Nombre)
+void cDragon::Alta_nombre(string Nombre) //Pasar a cVikingo
 {
 	nombre = Nombre;
 }
@@ -10,6 +11,13 @@ void cDragon::Alta_nombre(string Nombre)
 bool cDragon::Domado()
 {
 	return estado;
+
+	//bool dom;
+	//dom = random_bool();
+	//return dom;
+
+	//Para mi la funcion domado devuelve unicamente el valor del atributo 
+	// no devuelve uno random entre true y false
 }
 
 void cDragon::Baja()
@@ -42,20 +50,19 @@ void cDragon::set_estado(bool Estado)
 	estado = Estado;
 }
 
+int cDragon::get_vida()
+{
+	return vida;
+}
+
+void cDragon::set_vida(int Vida)
+{
+	this->vida = Vida;
+}
+
 bool cDragon::get_vivo()
 {
 	return true;
-}
-
-cDragon::cDragon()
-{
-	this->nombre = "Furia Nocturna";
-	this->tamanio = mediano;
-	this->color = negro;
-	this->estado = false;
-	this->vivo = true;
-	this->Fataque = NULL;
-
 }
 
 cDragon::cDragon(string Nombre, eTamanio Tamanio, eColor Color, bool Estado)
@@ -63,6 +70,7 @@ cDragon::cDragon(string Nombre, eTamanio Tamanio, eColor Color, bool Estado)
 	this->nombre = Nombre;
 	this->tamanio = Tamanio;
 	this->color = Color;
+	this->vida = 100;
 	this->estado = Estado;
 	this->vivo = true;
 	this->Fataque = NULL;

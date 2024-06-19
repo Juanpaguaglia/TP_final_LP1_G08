@@ -20,7 +20,12 @@ void cJinete::EliminarDragon(cDragon* dragon_e)
 
 void cJinete::Interaccion(cDragon* dragon)
 {
-	
+	//funcion que entrene a dragon
+}
+
+void cJinete::entrenamiento_bocon()
+{
+	this->resultado = resultadoRandom();  //guarda alguna de las 5 posibilidades del entrenamiento con bocon
 }
 
 list<cDragon*> cJinete::getDragones()
@@ -33,9 +38,9 @@ string cJinete::get_apodo()
 	return apodo;
 }
 
-string cJinete::get_fecha_nacimiento() 
+int cJinete::get_edad() 
 {
-	return fecha_nacimiento;
+	return edad;
 }
 
 eResultado cJinete::get_resultado() 
@@ -48,10 +53,10 @@ void cJinete::set_resultado(eResultado resultado)
 	this->resultado = resultado;
 }
 
-cJinete::cJinete(string Apodo, string Fecha_Nacimiento,eResultado Resultado)
+cJinete::cJinete(string Apodo, int Edad,eResultado Resultado)
 {
 	this->apodo = Apodo;
-	this->fecha_nacimiento = Fecha_Nacimiento;
+	this->edad = Edad;
 	this->resultado = Resultado;
 	this->dragones_montados = NULL;
 }

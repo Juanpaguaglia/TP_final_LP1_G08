@@ -19,7 +19,6 @@ public:
 	cAtaqueAD();
 	~cAtaqueAD();
 
-	void Adefinir();
-
+	void Polimorfico_no_desarrollado();
 };
 

@@ -19,7 +19,7 @@ public:
 	cAtaqueCC();
 	~cAtaqueCC();
 
-	void Adefinir();
+	void Polimorfico_no_desarrollado();
 
 
 

@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include=".cpp\funciones.cpp" />
     <ClCompile Include="cAtaque.cpp" />
     <ClCompile Include="cAtaqueAD.cpp" />
     <ClCompile Include="cAtaqueCC.cpp" />
     <ClCompile Include="cDragon.cpp" />
     <ClCompile Include="cEstoico.cpp" />
+    <ClCompile Include="cGuerrero.cpp" />
     <ClCompile Include="cJinete.cpp" />
     <ClCompile Include="cVikingo.cpp" />
     <ClCompile Include="main.cpp" />
@@ -142,6 +144,7 @@
     <ClInclude Include="cAtaqueCC.h" />
     <ClInclude Include="cDragon.h" />
     <ClInclude Include="cEstoico.h" />
+    <ClInclude Include="cGuerrero.h" />
     <ClInclude Include="cJinete.h" />
     <ClInclude Include="cVikingo.h" />
     <ClInclude Include="Headers.h" />

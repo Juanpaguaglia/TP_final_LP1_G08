@@ -10,7 +10,7 @@ class cJinete:public cVikingo
 protected:
 
 	string apodo;
-	string fecha_nacimiento;
+	int edad;
 	eResultado resultado;
 	list <cDragon*> dragones_montados;
 
@@ -18,15 +18,16 @@ public:
 
 	void Incorporar_Dragon(cDragon* dragon_n); //es un set al final de la lista de dragones
 	void EliminarDragon(cDragon* dragon_e); //hacer try catch exception
-	void Interaccion(cDragon* dragon); //En este caso va a ser entrenarlo y en el guerrero matarlo
+	void Interaccion(cDragon* dragon); //En este caso va a ser entrenarlo
+	void entrenamiento_bocon();
 
 	list <cDragon*> getDragones();//get de la lista de dragones
 	string get_apodo();
-	string get_fecha_nacimiento();
+	int get_edad();
 	eResultado get_resultado();
 	void set_resultado(eResultado resultado);
 
-	cJinete(string Apodo, string Fecha_Nacimiento, eResultado resultado);
+	cJinete(string Apodo, int Edad, eResultado resultado);
 	~cJinete();
 
 };
