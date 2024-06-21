@@ -3,11 +3,6 @@
 
 int cDragon::dragonesCreados = 0;
 
-void cDragon::Alta_nombre(string Nombre) //Pasar a cVikingo
-{
-	nombre = Nombre;
-}
-
 bool cDragon::Domado()
 {
 	return estado;
@@ -33,6 +28,11 @@ list<cAtaque*> cDragon::get_Fataque()
 string cDragon::get_nombre()
 {
 	return nombre;
+}
+
+void cDragon::set_nombre(string Nombre)
+{
+	this->nombre = Nombre;
 }
 
 eTamanio cDragon::get_tamanio()

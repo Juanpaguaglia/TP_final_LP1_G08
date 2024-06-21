@@ -1,5 +1,9 @@
 #include"Headers.h"
 
+void cJinete::Alta_nombre(cDragon* dragon_n)
+{
+}
+
 void cJinete::Incorporar_Dragon(cDragon* dragon_n)
 {
 	this->dragones_montados.push_back(dragon_n);

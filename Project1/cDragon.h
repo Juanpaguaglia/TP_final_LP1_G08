@@ -25,12 +25,12 @@ private:
 
 public:
 
-	void Alta_nombre(string Nombre); //set nombre (Hacerlo en vikingo)
 	bool Domado(); //get estado
 	void Baja(); //set vivo, es decir cuando muere el dragon le cambia el atributo
 	
 	list<cAtaque*> get_Fataque();
 	string get_nombre();
+	void set_nombre(string Nombre);
 	eTamanio get_tamanio();
 	eColor get_color();
 	void set_estado(bool Estado);
