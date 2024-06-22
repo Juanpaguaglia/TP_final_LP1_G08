@@ -22,7 +22,7 @@ void cJinete::EliminarDragon(cDragon* dragon_e)
 			throw exception("El elemento no esta en la lista");
 }
 
-void cJinete::Interaccion(cDragon* dragon)
+void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
 {
 	//funcion que entrene a dragon
 }
@@ -30,6 +30,11 @@ void cJinete::Interaccion(cDragon* dragon)
 void cJinete::entrenamiento_bocon()
 {
 	this->resultado = resultadoRandom();  //guarda alguna de las 5 posibilidades del entrenamiento con bocon
+}
+
+string cJinete::to_string()
+{
+	//Hacer este
 }
 
 list<cDragon*> cJinete::getDragones()

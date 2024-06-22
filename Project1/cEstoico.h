@@ -14,16 +14,17 @@ public:
 	void AgregarVikingo(cVikingo* vik_nue);
 	void EliminarVikingo(cVikingo* vik_elim);
 	void EliminarDragon(cDragon* dra_elim);
+	string to_string();
 
 	void operator+(cDragon* dra_nue);
 	void operator+(cVikingo* vik_nue); 
 	void operator-(cDragon* dra_elim);
 	void operator-(cVikingo* vik_elim);
+	void operator<<(cEstoico* Estoico_n); 
 
 	//agregar funciones que hagan lo que pide la consigna
 
-	cEstoico();
-	cEstoico(cDragon* dragon1, cJinete* jinete1, cVikingo* vikingo1);
+	cEstoico(cDragon* dragon1, cVikingo* vikingo1);
 	~cEstoico();
 };
 

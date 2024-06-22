@@ -34,6 +34,32 @@ void cEstoico::EliminarDragon(cDragon* dra_elim)
 {
 }
 
+string cEstoico::to_string()
+{
+	stringstream aux;
+	aux << "La cantidad de vikingos creados es: " << cEstoico::vikingosActivos << ", la cantidad de dragones creados es: " << cEstoico::dragonesActivos;
+	
+	list<cVikingo*>::iterator it_1 = this->vikingos.begin();
+	
+	while (it_1 != vikingos.end()) {
+		
+		cGuerrero* guerrero_aux = dynamic_cast<cGuerrero*>((*it_1)); 
+		cJinete* jinete_aux = dynamic_cast<cJinete*>((*it_1));
+		
+		if (guerrero_aux != nullptr)
+		{
+			aux << guerrero_aux->to_string(); //chequear esto
+		}
+		else if (jinete_aux != nullptr)
+		{
+			aux << jinete_aux->to_string();
+		}
+		it_1++;
+	}
+	return aux.str();
+}
+}
+
 void cEstoico::operator+(cDragon* dra_nue)
 {
 	AgregarDragon(dra_nue);
@@ -60,7 +86,12 @@ void cEstoico::operator-(cVikingo* vik_elim)
 		throw exception("No se puede eliminar, vacio"); //hacer el try catch
 }
 
-cEstoico::cEstoico(cDragon* dragon1, cJinete* jinete1, cVikingo* vikingo1)
+void cEstoico::operator<<(cEstoico* Estoico_n)
+{
+	Estoico_n->to_string();
+}
+
+cEstoico::cEstoico(cDragon* dragon1, cVikingo* vikingo1)
 {
 	this->dragones.push_back(dragon1);
 	this->vikingos.push_back(vikingo1);

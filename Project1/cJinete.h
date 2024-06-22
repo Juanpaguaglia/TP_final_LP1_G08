@@ -21,6 +21,7 @@ public:
 	void EliminarDragon(cDragon* dragon_e); //hacer try catch exception
 	void Interaccion(cDragon* dragon); //En este caso va a ser entrenarlo
 	void entrenamiento_bocon();
+	string to_string();
 
 	list <cDragon*> getDragones();//get de la lista de dragones
 	string get_apodo();

@@ -25,7 +25,7 @@ void cGuerrero::Interaccion(cDragon* dragon)
 	}
 }
 
-//para agregar los dragones matados al vector de Dragones
+//para agregar los dragones matados al vector de Dragones matados
 void cGuerrero::agregarDragonMuerto(cDragon obj_dragon) {
 	Dragones.push_back(obj_dragon);
 }
@@ -37,6 +37,16 @@ void cGuerrero::mostrarDragones() const {
 	{
 		Dragones[i].nombre;
 	}
+}
+
+string cGuerrero::to_string()
+{
+	stringstream aux;
+
+	aux << this->nombre << " " << this->apellido << ",un" << this->posicion << this->caracteristica<<"y gran guerrero, logro matar"<<
+		this->dragones_matados << "dragones." << endl;
+
+	return ss.str();
 }
 
 cGuerrero::~cGuerrero()
