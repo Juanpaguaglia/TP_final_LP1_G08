@@ -16,4 +16,5 @@
 #include"cAtaqueAD.h"
 #include ".cpp/funciones.cpp"
 #include <cstdlib>
+#include<sstream>
 using namespace std;

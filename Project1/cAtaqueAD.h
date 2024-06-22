@@ -14,11 +14,11 @@ protected:
 public:
 
 	eTipoAD get_tipoAD();
-	void set_tipoAD(int danio, eTipoAD tipoad);
+	void set_tipoAD(eTipoAD tipoad);
 
-	cAtaqueAD();
+	cAtaqueAD(int Danio, eTipoAD tipoAD);
 	~cAtaqueAD();
 
-	void Polimorfico_no_desarrollado();
+	void Polimorfico_no_desarrollado()const override; // Implementación de la función virtual pura
 };
 

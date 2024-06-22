@@ -42,3 +42,17 @@ int numeroRandom1_50() {
 
 	return distribucion(gen);
 }
+
+enum eTipoAD //Esta es para generar un valor aleatorio del tipo enum "eTipoAD"
+{
+	llama, rayo, acido
+};
+
+eTipoAD getRandomTipoAD() {
+	static random_device rd;
+	static mt19937 gen(rd());
+	static uniform_int_distribution<> dis(0, 2);
+
+	// eSto devuelve este numero entero pero convertido a eTipoAD mediante el static_cast.
+	return static_cast<eTipoAD>(dis(gen));
+}

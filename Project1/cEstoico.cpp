@@ -58,7 +58,6 @@ string cEstoico::to_string()
 	}
 	return aux.str();
 }
-}
 
 void cEstoico::operator+(cDragon* dra_nue)
 {

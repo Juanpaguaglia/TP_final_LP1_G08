@@ -21,6 +21,7 @@ void cGuerrero::Interaccion(cDragon* dragon)
 			dragon->vivo = false;
 			dragones_matados++;
 			cout << "Dragon muerto" << endl;
+			agregarDragonMuerto(*dragon);
 		}
 	}
 }
@@ -46,7 +47,7 @@ string cGuerrero::to_string()
 	aux << this->nombre << " " << this->apellido << ",un" << this->posicion << this->caracteristica<<"y gran guerrero, logro matar"<<
 		this->dragones_matados << "dragones." << endl;
 
-	return ss.str();
+	return aux.str();
 }
 
 cGuerrero::~cGuerrero()

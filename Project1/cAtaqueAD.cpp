@@ -1,20 +1,24 @@
-#include "cAtaqueAD.h"
+#include "Headers.h"
 
 eTipoAD cAtaqueAD::get_tipoAD()
 {
 	return tipoAD;
 }
 
-void cAtaqueAD::set_tipoAD(int danio, eTipoAD tipoad):cAtaque(danio)
+void cAtaqueAD::set_tipoAD(eTipoAD tipoad)
 {
 	this->tipoAD = tipoad;
 }
 
-cAtaqueAD::cAtaqueAD()
+cAtaqueAD::cAtaqueAD(): cAtaque(), tipoAD(getRandomTipoAD()) 
 {
-	this->tipoAD = llama;
+	// Inicialización con valor aleatorio
 }
+
+cAtaqueAD::cAtaqueAD(int danio, eTipoAD tipoAD): cAtaque(danio), tipoAD(tipoAD)
+	// Inicialización con parámetros
+{}
 
 cAtaqueAD::~cAtaqueAD()
 {
-}
+};
