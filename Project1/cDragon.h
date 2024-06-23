@@ -14,7 +14,6 @@ class cDragon
 {
 private:
 
-	static int dragonesCreados;
 	string nombre;
 	eTamanio tamanio;
 	eColor color;
@@ -37,11 +36,11 @@ public:
 	int get_vida();
 	void set_vida(int Vida);
 	bool get_vivo();
-
+	string to_stringD();
 	
 	friend cGuerrero;
 
-	cDragon(string Nombre,eTamanio Tamanio, eColor Color, bool Estado);
+	cDragon(string Nombre, eTamanio Tamanio, eColor Color, bool Estado);
 	~cDragon();
 
 };

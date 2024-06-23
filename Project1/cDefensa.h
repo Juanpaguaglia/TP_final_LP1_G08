@@ -13,6 +13,7 @@ protected:
 public:
 	eTipoDefensa get_tipoDefensa();
 	void set_tipoDefensa(eTipoDefensa Tipo);
+	string to_stringDef();
 
 	cDefensa();
 	cDefensa(int Danio, eTipoDefensa Tipo); // Constructor con parámetros

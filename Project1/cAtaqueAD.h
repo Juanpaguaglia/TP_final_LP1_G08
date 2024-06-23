@@ -15,6 +15,7 @@ public:
 
 	eTipoAD get_tipoAD();
 	void set_tipoAD(eTipoAD tipoad);
+	string to_stringAD();
 
 	cAtaqueAD();
 	cAtaqueAD(int Danio, eTipoAD TipoAD);

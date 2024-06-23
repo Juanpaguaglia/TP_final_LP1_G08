@@ -50,14 +50,21 @@ void cEstoico::EliminarDragon(cDragon* dra_elim)
 string cEstoico::to_string()
 {
 	stringstream aux;
-	aux << "La cantidad de vikingos activos es: " << cEstoico::vikingosActivos << ", la cantidad de dragones activos es: " << cEstoico::dragonesActivos;
-	
-	list<cVikingo*>::iterator it_1 = this->vikingos.begin();
-	
-	while (it_1 != vikingos.end()) {
+	aux << "La cantidad de dragones activos es: " << cEstoico::dragonesActivos << endl; //Pq son propios de la clase no de los objetos
+	list<cDragon*>::iterator it_1 = this->dragones.begin();
+	while (it_1 != dragones.end()) 
+	{
+		aux << (*it_1)->to_stringD();
+		it_1++;
+	}
+
+	aux << "La cantidad de vikingos activos es: " << cEstoico::vikingosActivos << endl;
+	list<cVikingo*>::iterator it_2 = this->vikingos.begin();
+	while (it_2 != vikingos.end()) 
+	{
 		
-		cGuerrero* guerrero_aux = dynamic_cast<cGuerrero*>((*it_1)); 
-		cJinete* jinete_aux = dynamic_cast<cJinete*>((*it_1));
+		cGuerrero* guerrero_aux = dynamic_cast<cGuerrero*>((*it_2)); 
+		cJinete* jinete_aux = dynamic_cast<cJinete*>((*it_2));
 		
 		if (guerrero_aux != nullptr)
 		{
@@ -67,7 +74,7 @@ string cEstoico::to_string()
 		{
 			aux << jinete_aux->to_string();
 		}
-		it_1++;
+		it_2++;
 	}
 	return aux.str();
 }

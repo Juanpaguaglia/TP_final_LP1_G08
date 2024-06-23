@@ -1,18 +1,9 @@
 #include"Headers.h"
 #include "cDragon.h"
 
-int cDragon::dragonesCreados = 0;
-
 bool cDragon::Domado()
 {
 	return estado;
-
-	//bool dom;
-	//dom = random_bool();
-	//return dom;
-
-	//Para mi la funcion domado devuelve unicamente el valor del atributo 
-	// no devuelve uno random entre true y false
 }
 
 void cDragon::Baja()
@@ -63,6 +54,32 @@ void cDragon::set_vida(int Vida)
 bool cDragon::get_vivo()
 {
 	return true;
+}
+
+string cDragon::to_stringD()
+{
+	stringstream aux;
+	aux << "(" << this->vivo << ")" << this->nombre << "," << this->tamanio << "y de color" << this->color << "está" << this->estado << "y tiene las siguientes formas de ataque:";
+
+	list<cAtaque*>::iterator it = Fataque.begin();
+	while (it != Fataque.end()) 
+	{
+		cAtaqueAD* ataqueAD = dynamic_cast<cAtaqueAD*>(*it);
+		if (ataqueAD != nullptr) 
+		{
+			aux << ataqueAD->to_stringAD();
+		}
+		else
+		{
+			cDefensa* defensa = dynamic_cast<cDefensa*>(*it);
+			if (defensa != nullptr)
+			{
+				aux << defensa->to_stringDef();
+			}
+			it++;
+		}
+	}
+		return aux.str();
 }
 
 cDragon::cDragon(string Nombre, eTamanio Tamanio, eColor Color, bool Estado)
