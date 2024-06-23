@@ -5,6 +5,11 @@ int cAtaque::get_danio()
 	return danio;
 }
 
+void cAtaque::set_danio(int danio_n)
+{
+	this->danio = danio_n;
+}
+
 cAtaque::cAtaque()
 {
 	danio = rand() % 1000; //daño aleatorio entre 0 y 1000

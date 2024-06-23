@@ -34,7 +34,13 @@ void cJinete::entrenamiento_bocon()
 
 string cJinete::to_string()
 {
-	//Hacer este
+	stringstream aux;
+
+	aux << this->nombre << " " << this->apellido << "mas conocido como" << this->apodo << "de" << this->edad << "años" << 
+		",es un" << this->posicion << this->caracteristica << "y gran jinete, que logro el resultado de:" <<
+		this->resultado << "en el entrenamiento de Bocon." << endl;
+
+	return aux.str();
 }
 
 list<cDragon*> cJinete::getDragones()
