@@ -41,15 +41,15 @@ void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
                 cout << "Entrenando nuevo ataque a distancia..." << endl;// Si es un ataque de tipo AD (Ataque a Distancia)
 
                 if (resultado == Primero) {
-                    ataqueAD->set_danio(ataqueAD->get_danio() + 3);
+                    ataqueAD->set_danio(ataqueAD->get_danio() + 3); //Si salio primero es el que mas puntos suma al daño del ataque AD del dragon
                 }
                 else if (resultado == Aprobado) {
                     ataqueAD->set_danio(ataqueAD->get_danio() + 2);
                 }
                 else if (resultado == Ultimo) {
-                    ataqueAD->set_danio(ataqueAD->get_danio() + 1);
+                    ataqueAD->set_danio(ataqueAD->get_danio() + 1); //Si salio ultimo es el que menos puntos suma al daño del ataque AD del dragon
                 }
-                else {
+                else { //Si no aprobo o no asistio no puede entrenar al dragon
                     cout<<"Como obtuvo" << resultado <<", usted no puede entrenar a su dragon";
                 }
             }
@@ -60,16 +60,16 @@ void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
                 {
                     cout << "Entrenando nueva defensa..." << endl;// Si es una defensa
 
-                    if (resultado == Primero) {
+                    if (resultado == Primero) { //Si salio primero es el que mas puntos suma al daño de la defensa del dragon
                         defensa->set_danio(defensa->get_danio() + 3);
                     }
-                    else if (resultado == Aprobado) {
+                    else if (resultado == Aprobado) { 
                         defensa->set_danio(defensa->get_danio() + 2);
                     }
-                    else if (resultado == Ultimo) {
+                    else if (resultado == Ultimo) { //Si salio ultimo es el que menos puntos suma al daño de la defensa del dragon
                         defensa->set_danio(defensa->get_danio() + 1);
                     }
-                    else {
+                    else { //Si no aprobo o no asistio no puede entrenar al dragon
                         cout << "Como obtuvo" << resultado << ", usted no puede entrenar a su dragon";
                     }
                 }
