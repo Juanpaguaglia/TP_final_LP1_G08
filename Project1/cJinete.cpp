@@ -2,6 +2,46 @@
 
 void cJinete::Alta_nombre(cDragon* dragon_n)
 {
+    for (list<cAtaque*>::iterator it = dragon_n->get_Fataque().begin(); it != dragon_n->get_Fataque().end(); ++it) // para recorrer todas las formas de ataque que posee el dragón
+    {
+        cAtaqueAD* ataqueAD = dynamic_cast<cAtaqueAD*>(*it);// Intenta convertir el puntero base a tipos derivados usando dynamic_cast
+        if (ataqueAD != nullptr)
+        {
+            string nombre_n;
+            switch(ataqueAD->get_tipoAD())
+            {
+            case llama:
+                nombre_n = "Llamitas de" + nombre;
+                dragon_n->set_nombre(nombre_n);
+            case rayo:
+                nombre_n = "Tormentoso de" + nombre;
+                dragon_n->set_nombre(nombre_n);
+            case acido:
+                nombre_n = "Venenoso de" + nombre;
+                dragon_n->set_nombre(nombre_n);
+            }            
+        }
+        else
+        {
+            cDefensa* defensa = dynamic_cast<cDefensa*>(*it);
+            if (defensa != nullptr) 
+            {
+                string nombre_n;
+                switch (defensa->get_tipoDefensa()) 
+                {
+                case mordida:
+                    nombre_n = "Dentudo de" + nombre;
+                    dragon_n->set_nombre(nombre_n);
+                case garrazo:
+                    nombre_n = "Rasguñador de" + nombre;
+                    dragon_n->set_nombre(nombre_n);
+                case coletazo:
+                    nombre_n = "Culon de" + nombre;
+                    dragon_n->set_nombre(nombre_n);
+                }
+            }
+        }
+    }
 }
 
 void cJinete::Incorporar_Dragon(cDragon* dragon_n)
@@ -33,7 +73,7 @@ void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
     {
         cout << "Entrenando a mi dragon --> " << dragon->get_nombre()<< endl;
 
-        for (list<cAtaque*>::iterator it = dragon->get_Fataque().begin(); it != dragon->get_Fataque().end(); ++it) // para recorrer todos los ataques que posee el dragón
+        for (list<cAtaque*>::iterator it = dragon->get_Fataque().begin(); it != dragon->get_Fataque().end(); ++it) // para recorrer todas las formas de ataque que posee el dragón
         {
             cAtaqueAD* ataqueAD = dynamic_cast<cAtaqueAD*>(*it);// Intenta convertir el puntero base a tipos derivados usando dynamic_cast
             if (ataqueAD != nullptr)
