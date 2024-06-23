@@ -12,7 +12,7 @@
 #include"cAtaque.h"
 #include"cEstoico.h"
 #include"cGuerrero.h"
-#include"cAtaqueCC.h"
+#include"cDefensa.h"
 #include"cAtaqueAD.h"
 #include ".cpp/funciones.cpp"
 #include <cstdlib>

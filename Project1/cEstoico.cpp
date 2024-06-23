@@ -37,7 +37,7 @@ void cEstoico::EliminarDragon(cDragon* dra_elim)
 string cEstoico::to_string()
 {
 	stringstream aux;
-	aux << "La cantidad de vikingos creados es: " << cEstoico::vikingosActivos << ", la cantidad de dragones creados es: " << cEstoico::dragonesActivos;
+	aux << "La cantidad de vikingos activos es: " << cEstoico::vikingosActivos << ", la cantidad de dragones activos es: " << cEstoico::dragonesActivos;
 	
 	list<cVikingo*>::iterator it_1 = this->vikingos.begin();
 	

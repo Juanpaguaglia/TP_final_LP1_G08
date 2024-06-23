@@ -56,3 +56,29 @@ eTipoAD getRandomTipoAD() {
 	// eSto devuelve este numero entero pero convertido a eTipoAD mediante el static_cast.
 	return static_cast<eTipoAD>(dis(gen));
 }
+
+//Sería una forma de hacer lo mismo que la funcion random anterior pero sin usar static_cast
+enum eTipoDefensa
+{
+	mordida, garrazo, coletazo
+};
+eTipoDefensa getRandomTipoDefensa()
+{
+	static random_device rd;
+	static mt19937 gen(rd());
+	static uniform_int_distribution<> dis(0, 2); // Suponiendo que hay 3 valores en el enum eTipoDefensa
+
+	int randNum = dis(gen);
+
+	switch (randNum)
+	{
+	case 0:
+		return mordida;
+	case 1:
+		return garrazo;
+	case 2:
+		return coletazo;
+	default:
+		return mordida; // Valor por defecto en caso de error
+	}
+}
