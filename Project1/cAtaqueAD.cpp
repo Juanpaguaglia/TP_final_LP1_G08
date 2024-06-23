@@ -15,9 +15,9 @@ cAtaqueAD::cAtaqueAD(): cAtaque(), tipoAD(getRandomTipoAD())
 	// Inicialización con valor aleatorio
 }
 
-cAtaqueAD::cAtaqueAD(int danio, eTipoAD tipoAD): cAtaque(danio), tipoAD(tipoAD)
-	// Inicialización con parámetros
-{}
+cAtaqueAD::cAtaqueAD(int Danio, eTipoAD TipoAD) : cAtaque(danio), tipoAD(TipoAD)
+{
+}
 
 cAtaqueAD::~cAtaqueAD()
 {

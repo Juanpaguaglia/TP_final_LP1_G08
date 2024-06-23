@@ -16,7 +16,8 @@ public:
 	eTipoAD get_tipoAD();
 	void set_tipoAD(eTipoAD tipoad);
 
-	cAtaqueAD(int Danio, eTipoAD tipoAD);
+	cAtaqueAD();
+	cAtaqueAD(int Danio, eTipoAD TipoAD);
 	~cAtaqueAD();
 
 	void Polimorfico_no_desarrollado()const override; // Implementación de la función virtual pura
