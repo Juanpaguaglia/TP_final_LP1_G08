@@ -13,12 +13,12 @@ protected:
 	vector<cDragon>Dragones; //dragones matados
 public:
 
-	cGuerrero(string nombre, string apellido, ePosicion posicion, eCaracteristica caracteristica, eArmas arma, int dragones_matados);
 	void Interaccion(cDragon* dragon); //Como es guerrero mata dragon
 	void agregarDragonMuerto(cDragon obj_dragon);
 	void mostrarDragones() const;
 	string to_string();
 
+	cGuerrero(string nombre, string apellido, ePosicion posicion, eCaracteristica caracteristica, eArmas arma, int dragones_matados);
 	~cGuerrero();
 	friend cDragon;
 };

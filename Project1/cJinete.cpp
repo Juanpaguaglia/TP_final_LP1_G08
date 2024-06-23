@@ -166,7 +166,7 @@ void cJinete::set_resultado(eResultado resultado)
 	this->resultado = resultado;
 }
 
-cJinete::cJinete(string Apodo, int Edad,eResultado Resultado):cVikingo()
+cJinete::cJinete(string Apodo, int Edad,eResultado Resultado):cVikingo() //revisar y hacer bien este constructor
 {
 	this->apodo = Apodo;
 	this->edad = Edad;
