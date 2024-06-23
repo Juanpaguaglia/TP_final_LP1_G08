@@ -13,7 +13,7 @@ protected:
 	vector<cDragon>Dragones; //dragones matados
 public:
 
-	void Interaccion(cDragon* dragon); //Como es guerrero mata dragon
+	void Interaccion(cDragon* dragon); //En este caso es matar al dragon
 	void agregarDragonMuerto(cDragon obj_dragon);
 	void mostrarDragones() const;
 	string to_string();
