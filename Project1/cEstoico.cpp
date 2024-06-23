@@ -27,11 +27,24 @@ void cEstoico::AgregarVikingo(cVikingo* vik_nue)
 
 void cEstoico::EliminarVikingo(cVikingo* vik_elim)
 {
-
+	list<cVikingo*>::iterator it = vikingos.begin();
+	while (it != vikingos.end()) {
+		if (*it == vik_elim) {
+			vikingos.erase(it);
+		}
+		it++;
+	}
 }
 
 void cEstoico::EliminarDragon(cDragon* dra_elim)
 {
+	list<cDragon*>::iterator it = dragones.begin();
+	while (it != dragones.end()) {
+		if (*it == dra_elim) {
+			dragones.erase(it);
+		}
+		it++;
+	}
 }
 
 string cEstoico::to_string()
