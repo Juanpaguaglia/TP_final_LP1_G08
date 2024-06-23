@@ -73,7 +73,7 @@ cDragon::cDragon(string Nombre, eTamanio Tamanio, eColor Color, bool Estado)
 	this->vida = 100;
 	this->estado = Estado;
 	this->vivo = true;
-	this->Fataque = NULL;
+	this->Fataque = list<cAtaque*>();
 }
 
 cDragon::~cDragon()

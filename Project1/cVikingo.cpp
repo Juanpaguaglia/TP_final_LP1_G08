@@ -37,12 +37,20 @@ string cVikingo::get_apellido()
 	return apellido;
 }
 
-cVikingo::cVikingo(string Nombre, string Apellido, ePosicion posicion, eCaracteristica caracteristica)
+cVikingo::cVikingo()
+{
+	this->nombre = "";
+	this->apellido = "";
+	this->caracteristica = grandote;
+	Trabajar();//this->posicion
+}
+
+cVikingo::cVikingo(string Nombre, string Apellido, ePosicion Posicion, eCaracteristica Caracteristica)
 {
 	this->nombre = Nombre;
 	this->apellido = Apellido;
-	this->posicion = posicion;
-	this->caracteristica = caracteristica;
+	this->posicion = Posicion;
+	this->caracteristica = Caracteristica;
 }
 
 cVikingo::~cVikingo()

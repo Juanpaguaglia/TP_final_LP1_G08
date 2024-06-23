@@ -37,6 +37,7 @@ public:
 	int get_vida();
 	void set_vida(int Vida);
 	bool get_vivo();
+
 	
 	friend cGuerrero;
 
