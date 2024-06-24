@@ -64,7 +64,8 @@ void cJinete::EliminarDragon(cDragon* dragon_e)
 
 void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
 {
-    if (dragon->Domado()!=true)
+    Domar(dragon); //Domo al dragon
+    if (dragon->Domado()!=true) //Chequeo que este domado
     {
         cout << "El dragon" << dragon->get_nombre() << "no esta domado, por lo que no se puede entrenar." << endl;
         return;
@@ -128,6 +129,11 @@ void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
 void cJinete::entrenamiento_bocon()
 {
 	this->resultado = resultadoRandom();  //guarda alguna de las 5 posibilidades del entrenamiento con bocon
+}
+
+void cJinete::Domar(cDragon* dragon_d)
+{
+    dragon_d->set_estado(true);
 }
 
 string cJinete::to_string()
