@@ -40,7 +40,7 @@ public:
 	
 	friend cGuerrero;
 
-	cDragon(string Nombre, eTamanio Tamanio, eColor Color, bool Estado);
+	cDragon(string Nombre, eTamanio Tamanio, eColor Color);
 	~cDragon();
 
 };

@@ -1,8 +1,11 @@
 #include "Headers.h"
 
 //Constructor de la derivada usando atributos de la base"cVikingo"
-cGuerrero::cGuerrero(string nombre, string apellido, ePosicion posicion, eCaracteristica caracteristica, eArmas arma, int dragones_matados)
-	:cVikingo(nombre, apellido, posicion, caracteristica), arma(arma), dragones_matados(dragones_matados) {}
+cGuerrero::cGuerrero(string Nombre, string Apellido, eCaracteristica Caracteristica, eArmas Arma)
+	:cVikingo(Nombre, Apellido, Caracteristica), arma(Arma)
+{
+	this->dragones_matados = 0;
+}
 
 void cGuerrero::Interaccion(cDragon* dragon)
 {

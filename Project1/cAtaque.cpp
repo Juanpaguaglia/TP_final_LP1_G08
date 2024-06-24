@@ -12,7 +12,7 @@ void cAtaque::set_danio(int danio_n)
 
 cAtaque::cAtaque()
 {
-	danio = rand() % 1000; //daño aleatorio entre 0 y 1000
+	this->danio = numeroRandom1_50(); //daño aleatorio entre 0 y 50
 }
 
 cAtaque::cAtaque(int danio_n) 

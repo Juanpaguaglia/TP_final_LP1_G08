@@ -17,12 +17,12 @@ string cAtaqueAD::to_stringAD()
 	return aux.str();
 }
 
-cAtaqueAD::cAtaqueAD(): cAtaque(), tipoAD(getRandomTipoAD()) 
+cAtaqueAD::cAtaqueAD(): cAtaque()
 {
-	// Inicialización con valor aleatorio
+	this->tipoAD = getRandomTipoAD();// Inicialización con valor aleatorio
 }
 
-cAtaqueAD::cAtaqueAD(int Danio, eTipoAD TipoAD) : cAtaque(danio), tipoAD(TipoAD)
+cAtaqueAD::cAtaqueAD(eTipoAD TipoAD) : cAtaque(), tipoAD(TipoAD)
 {
 }
 

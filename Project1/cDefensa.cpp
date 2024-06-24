@@ -17,12 +17,12 @@ string cDefensa::to_stringDef()
 	return aux.str();
 }
 
-cDefensa::cDefensa()
+cDefensa::cDefensa():cAtaque()
 {
 	this->tipo = getRandomTipoDefensa();
 }
 
-cDefensa::cDefensa(int Danio, eTipoDefensa Tipo) : cAtaque(danio), tipo(Tipo)
+cDefensa::cDefensa(eTipoDefensa Tipo) : cAtaque(), tipo(Tipo)
 {
 }
 

@@ -16,7 +16,7 @@ public:
 	string to_stringDef();
 
 	cDefensa();
-	cDefensa(int Danio, eTipoDefensa Tipo); // Constructor con parámetros
+	cDefensa(eTipoDefensa Tipo); // Constructor con parámetros
 	~cDefensa();
 
 	void Polimorfico_no_desarrollado();// Implementación de la función virtual pura

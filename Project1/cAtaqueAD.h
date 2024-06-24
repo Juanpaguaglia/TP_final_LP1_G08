@@ -18,7 +18,7 @@ public:
 	string to_stringAD();
 
 	cAtaqueAD();
-	cAtaqueAD(int Danio, eTipoAD TipoAD);
+	cAtaqueAD(eTipoAD TipoAD);
 	~cAtaqueAD();
 
 	void Polimorfico_no_desarrollado()const override; // Implementación de la función virtual pura

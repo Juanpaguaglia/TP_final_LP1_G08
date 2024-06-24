@@ -170,6 +170,7 @@ cEstoico::cEstoico()
 {
 	this->vikingos = list<cVikingo*>();
 	this->dragones = list<cDragon*>();
+	this->dragones_domados = list<cDragon*>();
 }
 
 cEstoico::~cEstoico()

@@ -82,13 +82,13 @@ string cDragon::to_stringD()
 		return aux.str();
 }
 
-cDragon::cDragon(string Nombre, eTamanio Tamanio, eColor Color, bool Estado)
+cDragon::cDragon(string Nombre, eTamanio Tamanio, eColor Color)
 {
 	this->nombre = Nombre;
 	this->tamanio = Tamanio;
 	this->color = Color;
 	this->vida = 100;
-	this->estado = Estado;
+	this->estado = false;
 	this->vivo = true;
 	this->Fataque = list<cAtaque*>();
 }

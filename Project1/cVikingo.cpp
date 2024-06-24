@@ -45,12 +45,10 @@ cVikingo::cVikingo()
 	Trabajar();//this->posicion
 }
 
-cVikingo::cVikingo(string Nombre, string Apellido, ePosicion Posicion, eCaracteristica Caracteristica)
+cVikingo::cVikingo(string Nombre, string Apellido, eCaracteristica Caracteristica) : nombre(Nombre), apellido(Apellido)
 {
-	this->nombre = Nombre;
-	this->apellido = Apellido;
-	this->posicion = Posicion;
 	this->caracteristica = Caracteristica;
+	Trabajar();
 }
 
 cVikingo::~cVikingo()

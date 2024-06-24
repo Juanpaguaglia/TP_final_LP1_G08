@@ -30,7 +30,7 @@ public:
 	eResultado get_resultado();
 	void set_resultado(eResultado resultado);
 
-	cJinete(string Apodo, int Edad, eResultado resultado);
+	cJinete(string Nombre, string Apellido, string Apodo, int Edad, eCaracteristica Caracteristica);
 	~cJinete();
 
 };

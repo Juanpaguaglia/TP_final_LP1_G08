@@ -31,7 +31,7 @@ public:
 	string get_apellido();
 
 	cVikingo();
-	cVikingo(string Nombre, string Apellido, ePosicion Posicion, eCaracteristica Caracteristica);
+	cVikingo(string Nombre, string Apellido, eCaracteristica Caracteristica);
 	virtual ~cVikingo();
 
 };

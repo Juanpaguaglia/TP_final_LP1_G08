@@ -18,7 +18,7 @@ public:
 	void mostrarDragones() const;
 	string to_string();
 
-	cGuerrero(string nombre, string apellido, ePosicion posicion, eCaracteristica caracteristica, eArmas arma, int dragones_matados);
+	cGuerrero(string Nombre, string Apellido, eCaracteristica caracteristica, eArmas arma);
 	~cGuerrero();
 	friend cDragon;
 };

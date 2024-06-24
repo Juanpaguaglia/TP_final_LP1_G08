@@ -172,11 +172,11 @@ void cJinete::set_resultado(eResultado resultado)
 	this->resultado = resultado;
 }
 
-cJinete::cJinete(string Apodo, int Edad,eResultado Resultado):cVikingo() //revisar y hacer bien este constructor
+cJinete::cJinete(string Nombre, string Apellido, string Apodo, int Edad, eCaracteristica Caracteristica):cVikingo(Nombre, Apellido, Caracteristica) 
 {
 	this->apodo = Apodo;
 	this->edad = Edad;
-	this->resultado = Resultado;
+    entrenamiento_bocon();
 	this->dragones_montados = list<cDragon*>();
 }
 
