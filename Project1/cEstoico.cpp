@@ -61,7 +61,7 @@ void cEstoico::EliminarDragon(cDragon* dra_elim)
 string cEstoico::to_string()
 {
 	stringstream aux;
-	aux << "La cantidad de dragones activos es: " << cEstoico::dragonesActivos << endl; //Pq son propios de la clase no de los objetos
+	aux << "La cantidad de dragones activos es: " << cEstoico::dragonesActivos << endl; //::Pq son propios de la clase no de los objetos
 	list<cDragon*>::iterator it_1 = this->dragones.begin();
 	while (it_1 != dragones.end()) 
 	{
@@ -161,12 +161,11 @@ void cEstoico::operator-(cVikingo* vik_elim) //vik_elim es el vikingo que quiero
 		throw exception("No se puede eliminar, vacio"); //hacer el try catch
 }
 
-stringstream cEstoico::operator<<(cEstoico* Estoico_n)
-{
-	stringstream print;
-	print << Estoico_n->to_string();
-	return print;
-}
+//ostream& cEstoico::operator<<(ostream& print, cEstoico Estoico_n)
+//{
+	//print << Estoico_n.to_string();
+	//return print;
+//}
 
 cEstoico::cEstoico()
 {

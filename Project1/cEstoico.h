@@ -24,7 +24,7 @@ public:
 	void operator+(cVikingo* vik_nue); 
 	void operator-(cDragon* dra_elim);
 	void operator-(cVikingo* vik_elim);
-	stringstream operator<<(cEstoico* Estoico_n); 
+	//ostream& operator<<(ostream& print, cEstoico Estoico_n); //No pudimos solucionar el error que dice que Estoico no tiene ningun miembro operator<<
 
 	cEstoico();
 	~cEstoico();
