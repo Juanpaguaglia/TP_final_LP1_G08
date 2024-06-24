@@ -102,8 +102,12 @@ void cEstoico::Administrar() //Funcion que voy a llamar en el main para hacer lo
 					if (aux_1 != nullptr)
 					{
 						aux_1->Interaccion(*it_2); //mando el dragon a entrenar 
-						(*it_2)->Domado() == true; //y me fijo si lo pudo domar
-						AgregarDrgAlista(dragones_domados, (*it_2)); //En caso de domarlo lo agrego a la lista de dragones domados
+						if ((*it_2)->Domado() == true) //y me fijo si lo pudo domar
+						{
+							AgregarDrgAlista(dragones_domados, (*it_2)); //En caso de domarlo lo agrego a la lista de dragones domados
+							EliminarDragon(*it_2); //Aca lo elimino de la lista original para que en esta lista queden solo los dragones salvajes
+							aux_1->Alta_nombre(*it_2); //Le cambio el nombre al dragon para que se sepa de que jinete es
+						} 
 						break;
 					}
 					else 
@@ -112,8 +116,11 @@ void cEstoico::Administrar() //Funcion que voy a llamar en el main para hacer lo
 						if (aux_2 != nullptr)
 						{
 							aux_2->Interaccion(*it_2); //mando el dragon a pelear
-							(*it_2)->Domado() == true; //y me fijo si esta domado (no lo va a estar)
-							AgregarDrgAlista(dragones_domados, (*it_2)); //En caso de estar domado lo agrego a domados (nunca va a pasar)
+							if ((*it_2)->Domado() == true) //y me fijo si esta domado (no lo va a estar)
+							{
+								AgregarDrgAlista(dragones_domados, (*it_2)); //En caso de estar domado lo agrego a domados (nunca va a pasar)
+								EliminarDragon(*it_2); //Aca lo elimino de la lista original para que en esta lista queden solo los dragones salvajes 								
+							} 
 							break;
 						}
 					}
