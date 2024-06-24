@@ -39,7 +39,7 @@ void cGuerrero::mostrarDragones() const {
 	cout << "Dragones en vector de Guerreros" << endl;
 	for (int i = 0; i < Dragones.size(); i++)
 	{
-		Dragones[i].nombre;
+		cout << Dragones[i].nombre;
 	}
 }
 
