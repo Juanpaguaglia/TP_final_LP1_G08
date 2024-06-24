@@ -13,6 +13,11 @@ list<cVikingo*> cEstoico::getVikingos()
 	return vikingos;
 }
 
+list<cDragon*> cEstoico::getDragones_domados()
+{
+	return dragones_domados;
+}
+
 void cEstoico::AgregarDragon(cDragon* dra_nue)
 {
 	this->dragones.push_back(dra_nue);
@@ -23,6 +28,12 @@ void cEstoico::AgregarVikingo(cVikingo* vik_nue)
 {
 	this->vikingos.push_back(vik_nue);
 	vikingosActivos++;
+}
+
+void cEstoico::AgregarDrgAlista(list<cDragon*> lista, cDragon* drg_n) //Agrega un dragon especifico a una lista especifica
+{
+	lista.push_back(drg_n);
+	return;
 }
 
 void cEstoico::EliminarVikingo(cVikingo* vik_elim)
@@ -77,6 +88,44 @@ string cEstoico::to_string()
 		it_2++;
 	}
 	return aux.str();
+}
+
+void cEstoico::Administrar() //Funcion que voy a llamar en el main para hacer lo que me pide la consigna
+{
+	if (!vikingos.empty())
+		{	
+		for(list<cVikingo*>::iterator it_1 = this->vikingos.begin(); it_1 != vikingos.end(); it_1++) //Recorro la lista de vikingos 
+			{
+			for(list<cDragon*>::iterator it_2 = this->dragones.begin(); it_2 != dragones.end(); it_2++) //A su vez recorro la lista de dragones 
+				{
+					cJinete* aux_1 = dynamic_cast<cJinete*>(*(it_1)); //Si el vikingo es jinete...
+					if (aux_1 != nullptr)
+					{
+						aux_1->Interaccion(*it_2); //mando el dragon a entrenar 
+						(*it_2)->Domado() == true; //y me fijo si lo pudo domar
+						AgregarDrgAlista(dragones_domados, (*it_2)); //En caso de domarlo lo agrego a la lista de dragones domados
+						break;
+					}
+					else 
+					{
+						cGuerrero* aux_2 = dynamic_cast<cGuerrero*>(*(it_1)); //Por otro lado si el vikingo es guerrero...
+						if (aux_2 != nullptr)
+						{
+							aux_2->Interaccion(*it_2); //mando el dragon a pelear
+							(*it_2)->Domado() == true; //y me fijo si esta domado (no lo va a estar)
+							AgregarDrgAlista(dragones_domados, (*it_2)); //En caso de estar domado lo agrego a domados (nunca va a pasar)
+							break;
+						}
+					}
+
+				}
+			}
+		}
+	else
+	{
+		throw exception("Lista de Vikingos vacia"); //Hacer try catch
+		return;
+	}	
 }
 
 void cEstoico::operator+(cDragon* dra_nue)
