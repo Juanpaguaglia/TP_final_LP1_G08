@@ -22,8 +22,9 @@ cDefensa::cDefensa():cAtaque()
 	this->tipo = getRandomTipoDefensa();
 }
 
-cDefensa::cDefensa(eTipoDefensa Tipo) : cAtaque(), tipo(Tipo)
+cDefensa::cDefensa(eTipoDefensa Tipo) : cAtaque()
 {
+	this->tipo = Tipo;
 }
 
 cDefensa::~cDefensa()

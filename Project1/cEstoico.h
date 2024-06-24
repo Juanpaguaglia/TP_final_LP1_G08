@@ -24,7 +24,7 @@ public:
 	void operator+(cVikingo* vik_nue); 
 	void operator-(cDragon* dra_elim);
 	void operator-(cVikingo* vik_elim);
-	void operator<<(cEstoico* Estoico_n); 
+	stringstream operator<<(cEstoico* Estoico_n); 
 
 	cEstoico();
 	~cEstoico();

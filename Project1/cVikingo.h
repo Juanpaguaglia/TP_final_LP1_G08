@@ -22,7 +22,7 @@ protected:
 public:
 
 	void Trabajar(); //Dependiendo como es el vikingo le asigna una posicion
-	virtual void Interaccion(cDragon* dragon)const = 0;
+	virtual void Interaccion(cDragon* dragon) = 0;
 	
 	ePosicion get_posicion();
 	void set_posicion(ePosicion pos);

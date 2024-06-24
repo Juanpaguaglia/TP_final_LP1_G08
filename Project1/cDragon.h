@@ -26,7 +26,8 @@ public:
 
 	bool Domado(); //get estado
 	void Baja(); //set vivo, es decir cuando muere el dragon le cambia el atributo
-	
+	void AgregarFataque(cAtaque* Fata_nue);
+
 	list<cAtaque*> get_Fataque();
 	string get_nombre();
 	void set_nombre(string Nombre);

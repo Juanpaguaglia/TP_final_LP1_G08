@@ -11,6 +11,11 @@ void cDragon::Baja()
 	vivo = false;
 }
 
+void cDragon::AgregarFataque(cAtaque* Fata_nue)
+{
+	this->Fataque.push_back(Fata_nue);
+}
+
 list<cAtaque*> cDragon::get_Fataque()
 {
 	return Fataque;

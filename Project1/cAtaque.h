@@ -13,7 +13,7 @@ public:
 	cAtaque (int danio_n);
 	virtual ~cAtaque();
 
-	virtual void Polimorfico_no_desarrollado()const=0;
+	virtual void Polimorfico_no_desarrollado()=0;
 
 };
 

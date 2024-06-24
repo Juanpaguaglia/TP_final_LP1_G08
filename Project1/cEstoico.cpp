@@ -145,7 +145,7 @@ void cEstoico::operator+(cVikingo* vik_nue)
 	AgregarVikingo(vik_nue);
 }
 
-void cEstoico::operator-(cDragon* dra_elim)
+void cEstoico::operator-(cDragon* dra_elim) //dra_elim es el dragon que quiero eliminar de la lista
 {
 	if (dra_elim != nullptr)
 		EliminarDragon(dra_elim);
@@ -153,7 +153,7 @@ void cEstoico::operator-(cDragon* dra_elim)
 		throw exception("No se puede eliminar, vacio"); //hacer el try catch
 }
 
-void cEstoico::operator-(cVikingo* vik_elim)
+void cEstoico::operator-(cVikingo* vik_elim) //vik_elim es el vikingo que quiero eliminar de la lista
 {
 	if (vik_elim != nullptr)
 		EliminarVikingo(vik_elim);
@@ -161,9 +161,11 @@ void cEstoico::operator-(cVikingo* vik_elim)
 		throw exception("No se puede eliminar, vacio"); //hacer el try catch
 }
 
-void cEstoico::operator<<(cEstoico* Estoico_n)
+stringstream cEstoico::operator<<(cEstoico* Estoico_n)
 {
-	Estoico_n->to_string();
+	stringstream print;
+	print << Estoico_n->to_string();
+	return print;
 }
 
 cEstoico::cEstoico()
