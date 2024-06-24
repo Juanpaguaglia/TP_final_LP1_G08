@@ -26,7 +26,7 @@ public:
 	void operator-(cVikingo* vik_elim);
 	void operator<<(cEstoico* Estoico_n); 
 
-	cEstoico(cDragon* dragon1, cVikingo* vikingo1);
+	cEstoico();
 	~cEstoico();
 };
 

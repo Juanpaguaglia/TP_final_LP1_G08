@@ -159,10 +159,10 @@ void cEstoico::operator<<(cEstoico* Estoico_n)
 	Estoico_n->to_string();
 }
 
-cEstoico::cEstoico(cDragon* dragon1, cVikingo* vikingo1)
+cEstoico::cEstoico()
 {
-	this->dragones.push_back(dragon1);
-	this->vikingos.push_back(vikingo1);
+	this->vikingos = list<cVikingo*>();
+	this->dragones = list<cDragon*>();
 }
 
 cEstoico::~cEstoico()
