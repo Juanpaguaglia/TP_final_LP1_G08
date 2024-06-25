@@ -1,4 +1,5 @@
 #include"Headers.h"
+#pragma once
 
 class cAtaque //clase base de ataqueCC y ataqueAD
 {

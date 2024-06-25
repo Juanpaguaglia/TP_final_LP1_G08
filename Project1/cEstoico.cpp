@@ -1,4 +1,4 @@
-#include "Headers.h"
+#include "cEstoico.h"
 
 int cEstoico::vikingosActivos = 0;
 int cEstoico::dragonesActivos = 0;

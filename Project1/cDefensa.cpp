@@ -1,4 +1,4 @@
-#include "Headers.h"
+#include "cDefensa.h"
 
 eTipoDefensa cDefensa::get_tipoDefensa()
 {

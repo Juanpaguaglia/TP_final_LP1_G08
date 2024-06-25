@@ -1,4 +1,4 @@
-#include"Headers.h"
+#include"cAtaque.h"
 
 int cAtaque::get_danio()
 {

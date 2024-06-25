@@ -1,4 +1,5 @@
-#include "Headers.h"
+#include"cAtaque.h"
+#pragma once
 
 enum eTipoAD 
 {

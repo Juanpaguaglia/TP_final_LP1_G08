@@ -1,4 +1,6 @@
-#include"Headers.h"
+#include"cAtaqueAD.h"
+#include"cDefensa.h"
+#pragma once
 
 enum eTamanio 
 {
