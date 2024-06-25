@@ -1,4 +1,4 @@
-#include "Headers.h"
+#include "cGuerrero.h"
 
 //Constructor de la derivada usando atributos de la base"cVikingo"
 cGuerrero::cGuerrero(string Nombre, string Apellido, eCaracteristica Caracteristica, eArmas Arma)

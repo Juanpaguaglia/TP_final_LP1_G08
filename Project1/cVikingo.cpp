@@ -1,4 +1,4 @@
-#include"Headers.h"
+#include"cVikingo.h"
 
 void cVikingo::Trabajar()
 {

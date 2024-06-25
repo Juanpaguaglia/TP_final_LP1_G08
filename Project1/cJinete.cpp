@@ -1,4 +1,4 @@
-#include"Headers.h"
+#include"cJinete.h"
 
 void cJinete::Alta_nombre(cDragon* dragon_n)
 {

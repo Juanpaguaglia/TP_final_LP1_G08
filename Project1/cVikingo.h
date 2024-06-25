@@ -1,4 +1,5 @@
 #include"Headers.h"
+#pragma once
 
 enum eCaracteristica
 {

@@ -1,4 +1,7 @@
 #include "Headers.h"
+#include"cVikingo.h"
+#include"cDragon.h"
+#pragma once
 
 enum eArmas 
 { 

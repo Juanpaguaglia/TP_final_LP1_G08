@@ -1,4 +1,9 @@
 #include"Headers.h"
+#include"cGuerrero.h"
+#include"cJinete.h"
+#include"cVikingo.h"
+#include"cDragon.h"
+#pragma once
 
 class cEstoico
 {
