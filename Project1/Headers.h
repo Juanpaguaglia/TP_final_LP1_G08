@@ -8,4 +8,5 @@
 #include<random>
 #include <cstdlib>
 #include<sstream>
+#include".cpp/funciones.cpp"
 using namespace std;
