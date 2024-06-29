@@ -1,10 +1,7 @@
 #include"cAtaque.h"
 #pragma once
 
-enum eTipoAD 
-{
-	llama, rayo, acido
-};
+//eTipoAD
 
 class cAtaqueAD : public cAtaque
 {

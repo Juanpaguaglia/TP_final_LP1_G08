@@ -3,10 +3,7 @@
 #include"cDragon.h"
 #pragma once
 
-enum eArmas 
-{ 
-	espada, hacha, arcoflecha, lanza 
-};
+//eArmas
 
 class cGuerrero :public cVikingo
 {
@@ -18,11 +15,11 @@ public:
 
 	void Interaccion(cDragon* dragon); //En este caso es matar al dragon
 	void agregarDragonMuerto(cDragon obj_dragon);
-	void mostrarDragones() const;
+	void mostrarDragones();
 	string to_string();
 
 	cGuerrero(string Nombre, string Apellido, eCaracteristica caracteristica, eArmas arma);
 	~cGuerrero();
-	friend cDragon;
+
 };
 

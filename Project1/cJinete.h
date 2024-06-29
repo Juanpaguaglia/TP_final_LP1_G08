@@ -3,10 +3,7 @@
 #include"cDragon.h"
 #pragma once
 
-enum eResultado
-{
-	No_asistio, Aprobado, Desaprobado, Primero, Ultimo
-};
+//eResultado
 
 class cJinete:public cVikingo
 {

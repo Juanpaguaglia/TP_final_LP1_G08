@@ -1,15 +1,10 @@
 #include"Headers.h"
+#include "cDragon.h"
 #pragma once
 
-enum eCaracteristica
-{
-	grandote, religioso, creativo, astuto
-};
+//eCaracteristica
 
-enum ePosicion
-{
-	constructor, sacerdote, artesano, comerciante
-};
+//ePosicion
 
 class cVikingo //clase base de jinete y guerrero
 {

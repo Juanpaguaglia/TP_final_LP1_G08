@@ -161,11 +161,11 @@ void cEstoico::operator-(cVikingo* vik_elim) //vik_elim es el vikingo que quiero
 		throw exception("No se puede eliminar, vacio"); //hacer el try catch
 }
 
-//ostream& cEstoico::operator<<(ostream& print, cEstoico Estoico_n)
-//{
-	//print << Estoico_n.to_string();
-	//return print;
-//}
+ostream& operator<<(ostream& print, cEstoico Estoico_n)
+{
+	print << Estoico_n.to_string();
+	return print;
+}
 
 cEstoico::cEstoico()
 {

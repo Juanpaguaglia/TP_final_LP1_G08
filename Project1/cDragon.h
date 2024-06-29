@@ -1,16 +1,11 @@
 #include"cAtaqueAD.h"
 #include"cDefensa.h"
+#include"Headers.h"
 #pragma once
 
-enum eTamanio 
-{
-	chico, mediano, grande
-};
+//eTamanio
 
-enum eColor
-{
-	rojo, azul, amarillo, negro
-};
+//eColor
 
 class cDragon
 {
@@ -40,8 +35,6 @@ public:
 	void set_vida(int Vida);
 	bool get_vivo();
 	string to_stringD();
-	
-	friend cGuerrero;
 
 	cDragon(string Nombre, eTamanio Tamanio, eColor Color);
 	~cDragon();

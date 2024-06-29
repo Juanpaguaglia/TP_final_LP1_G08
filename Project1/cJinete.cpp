@@ -1,5 +1,13 @@
 #include"cJinete.h"
 
+eResultado resultadoRandom()
+{
+    random_device rand;
+    mt19937 gen(rand());
+    uniform_int_distribution<int> dist(0, 4);
+    return static_cast<eResultado>(dist(rand)); //genera un num aleatorio entre el 0 y 4 y devuelve el valor correspondiente a ese enum
+}
+
 void cJinete::Alta_nombre(cDragon* dragon_n)
 {
     for (list<cAtaque*>::iterator it = dragon_n->get_Fataque().begin(); it != dragon_n->get_Fataque().end(); ++it) // para recorrer todas las formas de ataque que posee el dragón
@@ -183,3 +191,4 @@ cJinete::cJinete(string Nombre, string Apellido, string Apodo, int Edad, eCaract
 cJinete::~cJinete()
 {
 }
+

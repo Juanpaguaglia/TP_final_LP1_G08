@@ -1,5 +1,26 @@
 #include "cDefensa.h"
 
+eTipoDefensa getRandomTipoDefensa()
+{
+	static random_device rd;
+	static mt19937 gen(rd());
+	static uniform_int_distribution<> dis(0, 2); // Suponiendo que hay 3 valores en el enum eTipoDefensa
+
+	int randNum = dis(gen);
+
+	switch (randNum)
+	{
+	case 0:
+		return mordida;
+	case 1:
+		return garrazo;
+	case 2:
+		return coletazo;
+	default:
+		return mordida; // Valor por defecto en caso de error
+	}
+}
+
 eTipoDefensa cDefensa::get_tipoDefensa()
 {
 	return tipo;
@@ -30,3 +51,8 @@ cDefensa::cDefensa(eTipoDefensa Tipo) : cAtaque()
 cDefensa::~cDefensa()
 {
 }
+
+void cDefensa::Polimorfico_no_desarrollado()
+{
+}
+

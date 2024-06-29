@@ -1,10 +1,7 @@
 #include"cAtaque.h"
 #pragma once
 
-enum eTipoDefensa
-{
-	mordida, garrazo, coletazo
-};
+//eTipoDefensa
 
 class cDefensa : public cAtaque
 {

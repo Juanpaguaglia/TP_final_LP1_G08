@@ -16,33 +16,43 @@ int main()
     cAtaque* defensa1 = new cDefensa();
     cAtaque* defensa2 = new cDefensa();
 
+    dragon1->AgregarFataque(ataque1);
+    dragon1->AgregarFataque(defensa1);
+    dragon2->AgregarFataque(ataque2);
+    dragon2->AgregarFataque(defensa2);
+    Estoico + dragon_elim;
     try
     {
-        dragon1->AgregarFataque(ataque1);
-        dragon1->AgregarFataque(defensa1);
-        dragon2->AgregarFataque(ataque2);
-        dragon2->AgregarFataque(defensa2);
-
-        Estoico + dragon_elim; 
         Estoico - dragon_elim; //Agrego y elimino un objeto para el control de excepciones
-
-        Estoico + jinete_elim;
+    }
+    catch (const exception& e) 
+    {
+        cout << e.what() << endl;
+    }
+    Estoico + jinete_elim;
+    try 
+    {
         Estoico - jinete_elim; //Agrego y elimino un objeto para el control de excepciones
-
-        Estoico + dragon1;
-        Estoico + dragon2;
-        Estoico + jinete1;
-        Estoico + jinete2;
-        Estoico + guerrero1;
-        Estoico + guerrero2;
-
+    }
+    catch (const exception& e) 
+    {
+        cout << e.what() << endl;
+    }
+    Estoico + dragon1;
+    Estoico + dragon2;
+    Estoico + jinete1;
+    Estoico + jinete2;
+    Estoico + guerrero1;
+    Estoico + guerrero2;
+    try
+    {
         Estoico.Administrar();
-        //cout <<Estoico;
     }
     catch (const exception& e)
     {
         cout << e.what() << endl;
     }
+    cout << Estoico;
 
     delete dragon1;
     delete dragon2;

@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include=".cpp\funciones.cpp" />
     <ClCompile Include="cAtaque.cpp" />
     <ClCompile Include="cAtaqueAD.cpp" />
     <ClCompile Include="cDefensa.cpp" />
