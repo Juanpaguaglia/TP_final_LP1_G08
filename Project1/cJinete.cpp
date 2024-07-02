@@ -10,7 +10,8 @@ eResultado resultadoRandom()
 
 void cJinete::Alta_nombre(cDragon* dragon_n)
 {
-    for (list<cAtaque*>::iterator it = dragon_n->get_Fataque().begin(); it != dragon_n->get_Fataque().end(); ++it) // para recorrer todas las formas de ataque que posee el dragón
+    list<cAtaque*> aux = dragon_n->get_Fataque();
+    for (list<cAtaque*>::iterator it = aux.begin(); it != aux.end(); ++it) // para recorrer todas las formas de ataque que posee el dragón
     {
         cAtaqueAD* ataqueAD = dynamic_cast<cAtaqueAD*>(*it);// Intenta convertir el puntero base a tipos derivados usando dynamic_cast
         if (ataqueAD != nullptr)
@@ -72,6 +73,7 @@ void cJinete::EliminarDragon(cDragon* dragon_e)
 
 void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
 {
+    list<cAtaque*> aux = dragon->get_Fataque();
     Domar(dragon); //Domo al dragon
     if (dragon->Domado()!=true) //Chequeo que este domado
     {
@@ -82,7 +84,7 @@ void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
     {
         cout << "Entrenando a mi dragon --> " << dragon->get_nombre()<< endl;
 
-        for (list<cAtaque*>::iterator it = dragon->get_Fataque().begin(); it != dragon->get_Fataque().end(); ++it) // para recorrer todas las formas de ataque que posee el dragón
+        for (list<cAtaque*>::iterator it = aux.begin(); it != aux.end(); ++it) // para recorrer todas las formas de ataque que posee el dragón
         {
             cAtaqueAD* ataqueAD = dynamic_cast<cAtaqueAD*>(*it);// Intenta convertir el puntero base a tipos derivados usando dynamic_cast
             if (ataqueAD != nullptr)
