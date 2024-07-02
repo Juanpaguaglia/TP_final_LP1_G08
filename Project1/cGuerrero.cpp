@@ -66,8 +66,8 @@ string cGuerrero::to_string()
 {
 	stringstream aux;
 
-	aux << this->nombre << " " << this->apellido << ",un" << this->posicion << this->caracteristica<<"y gran guerrero, logro matar"<<
-		this->dragones_matados << "dragones." << endl;
+	aux << this->nombre << " " << this->apellido << ", un " << enumPtostring() << " " << enumCtostring() << " y gran guerrero, logro matar " <<
+		this->dragones_matados << " dragones." << endl;
 
 	return aux.str();
 }

@@ -16,6 +16,7 @@ protected:
 
 public:
 
+	string enumRtostring();
 	void Alta_nombre(cDragon* dragon_n);
 	void Incorporar_Dragon(cDragon* dragon_n); //es un set al final de la lista de dragones
 	void EliminarDragon(cDragon* dragon_e); //hacer try catch exception

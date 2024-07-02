@@ -8,6 +8,21 @@ eResultado resultadoRandom()
     return static_cast<eResultado>(dist(rand)); //genera un num aleatorio entre el 0 y 4 y devuelve el valor correspondiente a ese enum
 }
 
+string cJinete::enumRtostring() {
+    switch (this->resultado) {
+    case No_asistio:
+        return "no asistio";
+    case Aprobado:
+        return "aprobado";
+    case Desaprobado:
+        return "desaprobado";
+    case Primero:
+        return "primero";
+    case Ultimo:
+        return "ultimo";
+    }
+}
+
 void cJinete::Alta_nombre(cDragon* dragon_n)
 {
     list<cAtaque*> aux = dragon_n->get_Fataque();
@@ -101,7 +116,8 @@ void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
                     ataqueAD->set_danio(ataqueAD->get_danio() + 1); //Si salio ultimo es el que menos puntos suma al daño del ataque AD del dragon
                 }
                 else { //Si no aprobo o no asistio no puede entrenar al dragon
-                    cout<<"Como obtuvo" << resultado <<", usted no puede entrenar a su dragon";
+                    cout << "Como obtuvo " << enumRtostring() << ", usted no puede entrenar a su dragon" << endl;
+                    
                 }
             }
             else
@@ -121,7 +137,8 @@ void cJinete::Interaccion(cDragon* dragon) //Como es jinete entrena dragon
                         defensa->set_danio(defensa->get_danio() + 1);
                     }
                     else { //Si no aprobo o no asistio no puede entrenar al dragon
-                        cout << "Como obtuvo" << resultado << ", usted no puede entrenar a su dragon";
+                        cout << "Como obtuvo " << enumRtostring() << ", usted no puede entrenar a su dragon" << endl;
+                        return;
                     }
                 }
                 else
@@ -150,9 +167,9 @@ string cJinete::to_string()
 {
 	stringstream aux;
 
-	aux << this->nombre << " " << this->apellido << "mas conocido como" << this->apodo << "de" << this->edad << "años" << 
-		",es un" << this->posicion << this->caracteristica << "y gran jinete, que logro el resultado de:" <<
-		this->resultado << "en el entrenamiento de Bocon." << endl;
+	aux << this->nombre << " " << this->apellido << " mas conocido como " << this->apodo << " de " << this->edad << " años " << 
+		",es un " << enumPtostring() << " " << enumCtostring() << " y gran jinete, que logro el resultado de: " <<
+		enumRtostring() << endl << "en el entrenamiento de Bocon." << endl;
 
 	return aux.str();
 }

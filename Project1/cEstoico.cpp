@@ -33,6 +33,7 @@ void cEstoico::AgregarVikingo(cVikingo* vik_nue)
 void cEstoico::AgregarDrgAlista(list<cDragon*> lista, cDragon* drg_n) //Agrega un dragon especifico a una lista especifica
 {
 	lista.push_back(drg_n);
+	dragonesActivos++;
 	return;
 }
 
@@ -42,6 +43,7 @@ void cEstoico::EliminarVikingo(cVikingo* vik_elim)
 	while (it != vikingos.end()) {
 		if (*it == vik_elim) {
 			vikingos.erase(it);
+			vikingosActivos--;
 			return;
 		}
 		it++;
@@ -54,6 +56,7 @@ void cEstoico::EliminarDragon(cDragon* dra_elim)
 	while (it != dragones.end()) {
 		if (*it == dra_elim) {
 			dragones.erase(it);
+			dragonesActivos--;
 			return;
 		}
 		it++;

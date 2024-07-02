@@ -1,5 +1,31 @@
 #include"cVikingo.h"
 
+string cVikingo::enumPtostring() {
+	switch (this->posicion) {
+	case constructor:
+		return "constructor";
+	case sacerdote:
+		return "sacerdote";
+	case artesano:
+		return "artesano";
+	case comerciante:
+		return "comerciante";
+	}
+}
+
+string cVikingo::enumCtostring() {
+	switch (this->caracteristica) {
+	case grandote:
+		return "grandote";
+	case religioso:
+		return "religioso";
+	case creativo:
+		return "creativo";
+	case astuto:
+		return"astuto";
+	}
+}
+
 void cVikingo::Trabajar()
 {
 	if (caracteristica == grandote)
